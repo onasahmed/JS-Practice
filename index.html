@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- CSS Links -->
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/media.css">
+    <title>JS Practice</title>
+  </head>
+  <body>
+    <section class="p-4">
+    <div class="container">
+    <h2>1. Onclick Fuction</h2>
+    <button class="btn btn-secondary" onclick="textChange1()">Click Here</button>
+    <p id="one">This text will be change if you click the button</p>
+       
+    <h2>2.Onmouseover Function</h2>
+
+    <p>Put your mouse cursor here on the button</p>
+    <button class="btn btn-dark" onmouseover="textChange2()">Put your cursor</button>
+    <p id="two">Pay close attention here</p>
+    <h2>3. On double click function</h2>
+    <button class="btn btn-secondary" ondblclick="textChange3()">Double Click</button>
+    <p id="three">The text will be changed if you double click on the button</p>
+    <h2>4. Changing HTML attribute with external JS.</h2>
+    <p>The pervious image will be come back if you click here</p>
+    <img id="imgChange" src="images/2.jpg">
+    <button class="btn btn-secondary" onclick="myImage2()">Click Here</button>
+    <h2>5. Changing styles of a function</h2>
+    <p id="35px">This text's font size is 16px at default unless you click the button</p>
+    <button class="btn btn-danger" onmouseover="fontChange()" onmousedown="fontBack()">Hover Me</button>
+    <h2>6. Hiding text</h2>
+    <p>To hide the font above just click here</p>
+    <button class="btn btn-primary" onclick="fontHide()">Hide</button>
+    <h2>7.Showing the hidden text</h2>
+    <button class="btn btn-default" onclick="fontBack()">Show</button>
+    <h2>8. The window.alert method</h2>
+    <button class="btn btn-secondary " onclick="window.print()">print</button>
+    <h2>9.Multiple image changing:</h2>
+    <button onclick='img1()'>Previous</button>
+
+    <img id="myImage" src="images/3.jpg" style="width:100px">
+
+    <button onclick="img2()">Next</button>
+    <h2>10. Document.Write tag</h2>
+    <p> Warning: If you click the button then all the content above will be vanished.</p>
+    <button type="button" onclick="document.write(5 + 6)">Try it</button>
+    <h2>11. Alert button</h2>
+    <button type="button" onclick="alert(5 + 6)">Warning</button>
+    <h2>12. Using variable</h2>
+    <p>In this example, x, y, and z are variables.</p>
+
+    <p id="dem12"></p>
+    <button onclick="demo12()">The result is</button>
+    <h2>13. We can use multiple values of same thing.</h2>
+    <code>
+
+      var  x = 10;
+      var x = 2;
+    </code>
+    <p> Here the value of X is 2.</p>
+    <h2>14. We can't take multiple values of same thing using <code>let</code></h2>
+    <code>
+      let x =10;
+      let x = 2;
+    </code>
+    <p>Here the value of X is 10. because 'let' doesn't consider multiple value.</p>
+    <h2>15.Declaring value first and then calling  it as <code>var</code>:</h2>
+    <button onclick="demo15()">click the button to know my name</button>
+    <p id="dem15"></p>
+    <p>here in the above part I've declared the value first and then I called it as <code>var</code></p>
+    <h2>16. Use of constant</h2>
+    <button class="btn btn-danger" onmouseover="demo16()">Try</button>
+    <p>Const syntax is like let. you can't have multiple value. but you can <br> have add or replace elements in the array</p>
+    <p id="dem16"> The result will be shown here</p>
+    <h2>17. Creating const obj:</h2>
+    <code> const grp = {people: '4' , sex: 'men'  }</code>
+    <p>now let's change the people property to 5</p>
+    <code>grp.people ='5';</code>
+    <p> now let's add another property</p>
+    <code>grp.marriage_status= 'Single'</code>
+    <h2>18. Use of Operators: </h2>
+    <p>We can add, substract , divide and multiply by operators. <br> If we divide 25 with 6 then the remainder will be 1</p>
+    <code> var x= 25;
+      x%=6;
+    </code>
+    <p>The output would be: <span id="dem18"></span></p>
+    <h2>19.increment or decrement operator:</h2>
+    <code>
+      let x = 5;
+      x++;
+      let z = x;
+    </code>
+    <p> the next number will come to the party if we call <code>++</code> or, <br>increase the value <span id="dem19"></span></p>
+    <h2>20. power of a number:</h2>
+    <code>
+      let x= 3;
+      document.getElementById("id").innerHTML = x ** 3
+    </code>
+    <p>3 power 3 = <span id="dem20"></span></p>
+    <p> we can use <code>math.pow(x,3)</code> as an alternative of this above.</p>
+    <h2>21. JavaScript Booleans</h2>
+    <p>Uses of true false.</p>
+    <p>If we take x=5 and y=5 too. then the boolean "==" will act like: x==y: <br> <span id="dem21"></span></p>
+    <h2>22. use of return:</h2>
+    <p>return the value of 10*9</p>
+    <p id="dem22" demo22(x,y)></p>
+    <h2>23. Giving multiple property name but using 2:</h2>
+    <p>There is 4 property of me. :name, :age, height: , weight: <br>but I'll call two of these property in the next line using js</p>
+    <p id="dem23"></p>
+    <h2>24.default event: </h2>
+    <p>To check the date press the button.</p>
+    <button onclick="demo24()">The time is?</button>
+    <p id="dem24"></p>
+    <h2>25. By calling ".length" we can count the total letter available in a "string"</h2>
+    <p>MYNAMEISISMAMAHMEDONAS</p>
+    <p>the total letter used/taken above is: <span id="dem25"></span></p>
+    <h2>26. Safe way to break string:</h2>
+    <code>
+      "Hello " +
+      "Dolly!";
+    </code>
+    <h2>27.Use of ".slice"</h2>
+    <p>To display specific range's letter from a string we can use .slice</p>
+    <p>My name is Onas</p>
+    <p>Here, I wanna show 5th to 12th letter.</p>
+    <p>The result is: <span id="dem27"></span></p>
+    <h2>28. Use of "replace":</h2>
+    <p>Replacing the word Mentor with CR</p>
+    <p id="dem28">The admin of our messenger group is CR</p>
+    <button onclick="demo28()">Click to remove CR</button>
+    <h2>29.Search method:</h2>
+    <p id="dem.29">This is a random text and I wanna know the location of 'know' in this text</p>
+    <p>The position of know is: <span id="dem29"></span></p>
+    </div>
+    <h2>30.Use of 'match'</h2>
+    <p id="dem.30">Tim paine is from Australia who loves to get pain in Spain</p>
+    <p>now I wanna know how many words are matched with 'pain' in the above text: <span id="dem30"></span></p>
+
+
+    </section>
+
+    
+    <!-- JS links -->
+    
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/script.js"></script>
+    
+  </body>
+</html>
